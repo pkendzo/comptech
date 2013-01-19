@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration debug="false" xmlns:log4j="http://jakarta.apache.org/log4j/">
+  
+  <appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+    <param name="threshold" value="DEBUG"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d %p [%c] - %m%n"/>
+    </layout>
+  </appender>
+  
+  <logger name="de.kendzo">
+    <level value="debug"/>
+  </logger>
+
+  <!-- jboss -->
+  <logger name="org.jboss">
+    <level value="warn"/>
+  </logger>
+
+  
+  <!--
+    Alle Logmeldungen werden an den Appender STDOUT geschickt.
+    Es gibt ein zusaetzliches Threshold im Appender STDOUT
+  -->
+  <root>
+    <appender-ref ref="STDOUT"/>
+  </root>
+  
+</log4j:configuration>
