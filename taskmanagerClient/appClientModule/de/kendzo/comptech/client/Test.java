@@ -9,4 +9,7 @@ package de.kendzo.comptech.client;
  */
 public class Test {
 
+	public Test(){
+		
+	}
 }
