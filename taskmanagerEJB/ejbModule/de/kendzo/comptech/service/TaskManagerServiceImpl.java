@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import javax.jws.WebService;
 
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
@@ -15,6 +16,7 @@ import de.kendzo.comptech.domain.TaskEntity;
 /**
  * Session Bean implementation class TaskManagerServiceImpl
  */
+@WebService
 @Stateless(mappedName = "taskmanagerService")
 public class TaskManagerServiceImpl implements TaskManagerService {
 
